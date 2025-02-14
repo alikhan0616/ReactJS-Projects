@@ -1,0 +1,194 @@
+* {
+        box-sizing: border-box;
+}
+html,body {
+        overflow-x: hidden; 
+        width: 100%; 
+}
+
+body{
+    margin: 0;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    background-color: #282726;
+    color: #D9D9D9;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body.scroll-enabled{
+    overflow: auto;
+}
+header {
+    text-align: center;
+     margin: 40px 0 5px 0;
+}
+header .Heading {
+    color: #F9F4DA;
+    font-size: 1.25rem;
+    font-weight: 450;
+}
+header p {
+    margin: 0 auto;
+    color: #8E8E8E;
+    max-width: 360px;
+    font-size: 0.85rem;
+}
+.msg-box {
+    width: 352px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #F9F4DA;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 18px;
+    
+}
+.msg-box.won{
+    background-color: #10A95B;
+}
+.msg-box.lost{
+    background-color: #BA2A2A;
+}
+.msg-box.farewellMsg{
+    background-color: #7A5EA7;
+    border: dashed 1px #282726;
+}
+#top-text {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+#bottom-text {
+    margin: 0;
+    font-size: 1rem;
+}
+.farewell {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+.languages-box{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+   width: 266px;
+   height: 52px;
+   font-size: 0.75rem;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-wrap: wrap;
+   gap: 1px;
+}
+p.lang {
+    position: relative;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
+p.lang.wrong::before {
+    content: "\1F480";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+ 
+
+.letter-boxes {
+    margin: 35px auto 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+}
+.letter-boxes span{
+    border-bottom: solid 1px #F9F4DA;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    background-color: #323232;
+    color: #F9F4DA;
+}
+.letter-boxes span.missing-letters {
+    color: #EC5D49;
+}
+.key-board {
+    margin: 30px auto 0;
+    max-width: 480px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.key-board button {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #D7D7D7;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: #FCBA29;
+    color: #1E1E1E;
+    font-size: 1rem;
+    cursor: pointer;
+}
+main .key-board button.correct{
+    background-color: #10A95B;
+}
+main .key-board button.incorrect{
+    background-color: #EC5D49;
+}
+main .key-board button.gameOver{
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.newgame-btn {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newgame-btn button {
+    border: none;
+    width: 228px;
+    height: 40px;
+    background-color: #11B5E5;
+    color: #1E1E1E;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 0.5px solid #D7D7D7;
+    padding: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.newgame-btn button.hiddenBtn {
+    display: none;
+}
